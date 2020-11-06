@@ -19,9 +19,6 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Mime;
-using BlazorAdmin;
-using BlazorAdmin.Services;
-using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.eShopWeb.ApplicationCore.Interfaces;
@@ -153,13 +150,6 @@ namespace Microsoft.eShopWeb.Web
             {
                 BaseAddress = new Uri(baseUrlConfig.WebBase)
             });
-
-            // add blazor services
-            services.AddBlazoredLocalStorage();
-            services.AddServerSideBlazor();
-
-            services.AddScoped<HttpService>();
-            services.AddBlazorServices();
 
             _services = services; // used to debug registered services
         }

@@ -1,6 +1,4 @@
 ﻿@page
-@using BlazorAdmin
-
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
@@ -66,8 +64,7 @@
     </script>
 </head>
 <body>
-    <admin>@(await Html.RenderComponentAsync<App>(RenderMode.ServerPrerendered))</admin>
-    <script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>
+<script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>
     <script src="_framework/blazor.webassembly.js"></script>
 
 </body>
